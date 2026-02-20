@@ -1,0 +1,53 @@
+.app-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: auto;
+    margin-top: 4rem;
+    max-width: 700px;
+}
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.6rem 0;
+}
+
+.home-header-text {
+    font-size: 2.5rem;
+    color: var(--header-text-color);
+}
+
+.msgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.msg-time {
+    width: 100%;
+    text-align: end;
+    margin-bottom: .4rem;
+
+    & > span {
+        background-color: var(--msg-line-bg);
+        color: var(--secondary-font-color);
+        padding: .2rem .5rem;
+    }
+}
+
+.msg-line-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--msg-line-bg);
+    border: 1px solid var(--border-color);
+    padding: .7rem 1rem;
+}
+
+.msg-btns .btn {
+    padding: .8rem;
+    box-shadow: none;
+}

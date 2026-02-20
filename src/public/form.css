@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--msg-line-bg);
+    padding: 2rem;
+
+    & h1 {
+        text-align: center;
+    }
+}
+
+.to-home {
+    width: 100%;
+    text-align: start;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Form</title>
     <link rel="stylesheet" href="/form.css">
+    <link rel="stylesheet" href="/common.css">
 </head>
 <body>
-    <a href="<%=homeUrl%>">< Home</a>
     <main>
+        <a class="to-home" href="<%=homeUrl%>">< Home</a>
         <h1 class="form-header">Add Messages</h1>
+
+        <hr>
 
         <form action="/new" method="post">
             <div class="input-container">
@@ -20,7 +23,7 @@
                 <label for="text">Message:</label>
                 <textarea name="text" id="text" placeholder="Write your message..."></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button class="btn" type="submit">Submit</button>
         </form>
     </main>
 </body>

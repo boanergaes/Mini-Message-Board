@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Board</title>
     <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/common.css">
 </head>
 <body>
-    <header class="home-header">
-        <h1 class="home-header-text">Message Board</h1>
-        <p class="home-sub-text">Discover your messages</p>
-    </header>
-    <main>
-        <% msgs.map(msg => { %>
-            <%- include('comps/msgLine', {msgId: msg.id, user: msg.user, text: msg.text, time: msg.added}) %>
-        <% }) %>
-    </main>
-    <a class="new-msg-btn" href="<%=newMsgUrl%>">New Message</a>
+    <div class="app-body">
+        <header class="home-header">
+            <h1 class="home-header-text">Message Board</h1>
+            <p class="home-sub-text">Discover your messages</p>
+        </header>
+        <main class="msgs">
+            <% msgs.map(msg => { %>
+                <%- include('comps/msgLine', {msgId: msg.id, user: msg.user, text: msg.text, time: msg.added}) %>
+            <% }) %>
+        </main>
+        <a class="btn" href="<%=newMsgUrl%>">New Message</a>
+    </div>
 </body>
 </html>
