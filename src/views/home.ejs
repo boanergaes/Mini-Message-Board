@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Board</title>
-    <link rel="stylesheet" href="/home.css">
-    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <script src="/scripts/home.js" defer></script>
 </head>
 <body>
-    <div class="app-body">
+    <div id="app" data-edit-id="<%=editId%>" class="app-body">
         <header class="home-header">
             <h1 class="home-header-text">Message Board</h1>
             <p class="home-sub-text">Discover your messages</p>
         </header>
         <main class="msgs">
-            <% msgs.map(msg => { %>
-                <%- include('comps/msgLine', {msgId: msg.id, user: msg.user, text: msg.text, time: msg.added}) %>
-            <% }) %>
+            <% for (let i = msgs.length -  1; i >= 0; i--) { %>
+                <%- include('comps/msgLine', {msgId: msgs[i].id, user: msgs[i].user, text: msgs[i].text, time: msgs[i].added, baseUrl: baseUrl}) %>
+            <% } %>
         </main>
-        <a class="btn" href="<%=newMsgUrl%>">New Message</a>
+        <a class="btn" href="<%=baseUrl + '/new'%>">New Message</a>
     </div>
 </body>
 </html>
+
+<!-- fetch(`/msg/${msgId}`, {method: 'put'})
+    .then(msg => {
+        console.log(msg)
+        location.reload()
+    })
+    .catch(err => {
+        console.error(err)
+        alert('Error when editing message!')
+    }) -->

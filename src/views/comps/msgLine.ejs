@@ -1,19 +1,31 @@
-<div class="msg-line">
+<div id="<%=msgId%>" class="msg-line">
     <div class="msg-time">
         <span><%= time %></span>
     </div>
     <div class="msg-line-body">
-        <div class="msg-line-txt">
-            <h2 class="user">
-                <%= user %>
-            </h2>
-            <p class="msg-text">
-                <%= text %>
-            </p>
+        <div class="main-line">
+            <div class="msg-line-txt">
+                <h2 class="user">
+                    <%= user %>
+                </h2>
+                <p class="msg-text">
+                    <%= text %>
+                </p>
+            </div>
+            <div class="msg-btns">
+                <button data-id="<%=msgId%>" class="btn dlt-btn">DLT</button>
+                <button data-id="<%=msgId%>" class="btn edt-btn">EDT</button>
+            </div>
         </div>
-        <div class="msg-btns">
-            <button class="btn">DLT</button>
-            <button class="btn">EDT</button>
-        </div>
+        <form class="msg-line-form">
+            <div class="input-container">
+                <label for="new-msg">New Message:</label>
+                <textarea id="<%=msgId%>-new-msg" name="new-msg" type="text" placeholder="Type your message..."><%=text%></textarea>
+            </div>
+            <div class="action-btns">
+                <button class="btn" id="<%=msgId%>-submit-edit-btn">Submit</button>
+                <button class="btn" id="<%=msgId%>-cancel-edit-btn">Cancel</button>
+            </div>
+        </form>
     </div>
 </div>
