@@ -11,6 +11,7 @@ main {
     gap: 2rem;
     background-color: var(--msg-line-bg);
     padding: 2rem;
+    min-width: 400px;
 
     & h1 {
         text-align: center;
@@ -37,4 +38,16 @@ form {
     display: flex;
     flex-direction: column;
     gap: .4rem;
+}
+
+label {
+    color: var(--secondary-font-color);
+}
+
+input, textarea {
+    padding: .4rem;
+}
+
+textarea {
+    min-height: 5rem;
 }
