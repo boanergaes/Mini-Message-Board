@@ -12,7 +12,7 @@ const app = express()
 
 // middlewares
 app.use(express.static(path.join(__dirname, 'public'))) // to serve static files like css
-app.use(express.urlencoded({extended: true})) //to be able to access form data
+app.use(express.urlencoded({extended: true})) //to be able to access form data. it's encoded in the url
 app.use(express.json())
 
 // set up view engine
