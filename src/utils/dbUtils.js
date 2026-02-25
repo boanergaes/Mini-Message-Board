@@ -1,7 +1,8 @@
+const path = require('path')
 const uuid = require('uuid')
 const { readJSON, writeJSON } = require("./fileUtils")
 
-const DB_PATH = "../db.json"
+const DB_PATH = path.join(__dirname, '..', 'db.json')
 
 async function getAllMsgsFromDB() {
     try {
