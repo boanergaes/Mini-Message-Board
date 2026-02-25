@@ -1,7 +1,7 @@
 const uuid = require('uuid')
 const { readJSON, writeJSON } = require("./fileUtils")
 
-const DB_PATH = "/home/zeamanuel/Projects/backend/Mini-Message-Board/src/db.json"
+const DB_PATH = "../db.json"
 
 async function getAllMsgsFromDB() {
     try {
