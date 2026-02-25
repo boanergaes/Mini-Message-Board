@@ -16,20 +16,10 @@
         </header>
         <main class="msgs">
             <% for (let i = msgs.length -  1; i >= 0; i--) { %>
-                <%- include('comps/msgLine', {msgId: msgs[i].id, user: msgs[i].user, text: msgs[i].text, time: msgs[i].added, baseUrl: baseUrl}) %>
+                <%- include('comps/msgLine', {msgId: msgs[i].id, user: msgs[i].user, text: msgs[i].text, time: msgs[i].added}) %>
             <% } %>
         </main>
-        <a class="btn" href="<%=baseUrl + '/new'%>">New Message</a>
+        <a class="btn" href="/new">New Message</a>
     </div>
 </body>
 </html>
-
-<!-- fetch(`/msg/${msgId}`, {method: 'put'})
-    .then(msg => {
-        console.log(msg)
-        location.reload()
-    })
-    .catch(err => {
-        console.error(err)
-        alert('Error when editing message!')
-    }) -->

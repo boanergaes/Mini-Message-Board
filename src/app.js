@@ -25,4 +25,4 @@ app.use('/new', routeForm)
 app.use('/msg', routeMsg)
 
 
-app.listen(PORT, () => console.log(`Running server on http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Running server on port ${PORT}`))

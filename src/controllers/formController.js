@@ -2,8 +2,7 @@ const uuid = require('uuid')
 const { addMsgsToDB } = require('../utils/dbUtils')
 
 function renderForm(req, res) {
-    const url = process.env.BASE_URL + ':' + process.env.PORT 
-    res.render('form', {homeUrl: url})
+    res.render('form')
 }
 
 function parseMsgBody(req, res, next) {
