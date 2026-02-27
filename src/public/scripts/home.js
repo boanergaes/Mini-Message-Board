@@ -52,7 +52,3 @@ document.querySelectorAll('.edt-btn').forEach(edtBtn => {
         })
     })
 })
-
-//document.querySelectorAll('.edit-panel').forEach(editPanel => {
-//    editPanel.addEventListener('submit')
-//})
