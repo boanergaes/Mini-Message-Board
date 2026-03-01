@@ -19,7 +19,10 @@ INSERT INTO messages (username, text, added) VALUES
 async function main() {
     console.log('seeding...')
     const client = new Client({
-        connectionString: process.env.DB_URL
+        connectionString: process.env.DB_URL,
+        ssl: {
+            rejectUnauthorized: false,
+        },
     })
     await client.connect()
     await client.query(SQL)
