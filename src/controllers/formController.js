@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 const { addMsgsToDB } = require('../utils/dbUtils')
+const db = require('../db/db')
 
 function renderForm(req, res) {
     res.render('form')
@@ -13,7 +14,7 @@ function parseMsgBody(req, res, next) {
 
 async function addMessage(req, res) {
     try {
-        await addMsgsToDB(req.body)
+        await db.addMsgsToDB(req.body)
         res.redirect('/')
     } catch(err) {
         throw err

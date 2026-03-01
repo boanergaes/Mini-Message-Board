@@ -1,11 +1,10 @@
 const express = require('express')
-const dotenv = require('dotenv')
 const path = require('node:path')
+require('dotenv').config()
+
 const { routeHome } = require('./routes/homeRoute')
 const { routeForm } = require('./routes/formRoute')
 const { routeMsg } = require('./routes/msgRoute')
-
-dotenv.config()
 
 const PORT = process.env.PORT || 5000
 const app = express()

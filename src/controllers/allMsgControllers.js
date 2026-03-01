@@ -1,9 +1,10 @@
 const { formatDate } = require("../utils/timeUtils")
 const { getAllMsgsFromDB } = require("../utils/dbUtils")
+const db = require('../db/db')
 
 async function getAllMsgs(req, res) {
     try{
-        const msgs = await getAllMsgsFromDB()
+        const msgs = await db.getAllMsgsFromDB()
         msgs.forEach(msg => {
             const formattedDate = formatDate(msg.added)
             msg.added = formattedDate
