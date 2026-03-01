@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const { editMsg, deleteMsg } = require('../controllers/msgController')
-const { getAllMsgs } = require('../controllers/allMsgControllers')
 
 const routeMsg = Router()
 

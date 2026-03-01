@@ -1,4 +1,3 @@
-const { deleteMsgFromDB, editMsgOnDB, getAllMsgsFromDB } = require("../utils/dbUtils")
 const db = require('../db/db')
 
 async function editMsg(req, res) {

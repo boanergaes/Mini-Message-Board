@@ -1,5 +1,3 @@
-const uuid = require('uuid')
-const { addMsgsToDB } = require('../utils/dbUtils')
 const db = require('../db/db')
 
 function renderForm(req, res) {
@@ -7,7 +5,6 @@ function renderForm(req, res) {
 }
 
 function parseMsgBody(req, res, next) {
-    req.body.id = uuid.v4()
     req.body.added = new Date()
     next()
 }

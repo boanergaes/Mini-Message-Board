@@ -1,5 +1,4 @@
 const { formatDate } = require("../utils/timeUtils")
-const { getAllMsgsFromDB } = require("../utils/dbUtils")
 const db = require('../db/db')
 
 async function getAllMsgs(req, res) {
