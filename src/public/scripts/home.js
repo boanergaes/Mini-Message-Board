@@ -10,7 +10,7 @@ document.querySelectorAll('.dlt-btn').forEach(dltBtn => {
             })
             .catch(err => {
                 console.error(err)
-                alert('Error occured when trying to delete the message!')
+                alert(err.message || 'Error occured when trying to delete the message!')
             })
     })
 })
@@ -47,7 +47,7 @@ document.querySelectorAll('.edt-btn').forEach(edtBtn => {
             })
             .catch(err => {
                 console.error(err)
-                alert('Error occured when trying to edit the message!')
+                alert(err.message || 'Error occured when trying to edit the message!')
             })
         })
     })
